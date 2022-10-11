@@ -8,7 +8,7 @@
 
         <!-- title and favicon -->
         <title>1 Floor Down</title>
-        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.PNG" />
 
         <!-- js -->
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
@@ -30,15 +30,49 @@
 
     <body>
         <header class="page-header">
-            <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <p class="title">Supabase Web App</p>
+            <img class="logo" src="/assets/1floordown.PNG" alt="logo" />
+            <p class="title"></p>
             <nav>
                 <a href="/">Home</a>
-                <a id="sign-out-link" href="auth">Sign Out</a>
-                <a href="">Add Post</a>
+                <a href="/post-editor/index.html">Add Post</a>
+                <div>
+                    <a href="/profile-editor/index.html" id="nav-username">Username</a>
+                    <a id="sign-out-link" href="auth">Sign Out</a>
+                </div>
             </nav>
         </header>
 
-        <main></main>
+        <main>
+            <ul id="post-list">
+                <li>
+                    <div class="card-header">
+                        <div class="user-info">
+                            <p>username</p>
+                            <p>unit #</p>
+                        </div>
+                        <p>created date</p>
+                    </div>
+                    <h2>Post title 1</h2>
+                    <p>
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                </li>
+                <li>
+                    <div class="card-header">
+                        <div class="user-info">
+                            <p>username</p>
+                            <p>unit #</p>
+                        </div>
+                        <p>created date</p>
+                    </div>
+                    <h2>Post title 2</h2>
+                    <p>
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                </li>
+            </ul>
+        </main>
     </body>
 </html>
