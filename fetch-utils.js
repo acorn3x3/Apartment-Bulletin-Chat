@@ -28,6 +28,29 @@ export async function signOutUser() {
 }
 
 /* Data functions */
+
+// createPost
 export async function createPost(newPost) {
-    console.log(newPost);
+    // const profile = {
+    //     title: '',
+    //     content: '',
+    //     photo_url: '', //later
+    // };
+    return await client.from('posts').insert(newPost).single();
+}
+
+//
+
+export async function updateProfile(profile) {
+    // const profile = {
+    //     user_name: '',
+    //     unit: '',
+    //     photo_url: '', //later
+    // };
+    return await client.from('profiles').upsert(profile).single();
+}
+
+// getProfile()
+export async function getProfile(id) {
+    return await client.from('profiles').select('*').eq('id', id).maybeSingle();
 }
