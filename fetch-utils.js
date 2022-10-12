@@ -39,7 +39,10 @@ export async function createPost(newPost) {
     return await client.from('posts').insert(newPost).single();
 }
 
-//
+// getPosts
+export async function getPosts() {
+    console.log('working!');
+}
 
 export async function updateProfile(profile) {
     // const profile = {
