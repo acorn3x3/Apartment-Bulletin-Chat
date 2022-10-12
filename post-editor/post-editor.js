@@ -18,7 +18,13 @@ postForm.addEventListener('submit', async (e) => {
         title: formData.get('post-title'),
         content: formData.get('post-content'),
     };
-    createPost(newPost);
+    const response = await createPost(newPost);
+    error = response.error;
+    if (error) {
+        alert(error.message);
+    } else {
+        location.replace('/');
+    }
 });
 
 // Display
