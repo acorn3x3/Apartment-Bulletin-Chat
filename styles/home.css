@@ -8,7 +8,16 @@
 }
 
 li {
-    background-color: white;
+    background-color: rgb(243, 243, 243);
     padding: 10px;
     margin: 10px;
+    height: 20%;
+    width: 40%;
+    position: absolute;
+    border-radius: 10%;
+    border-color: rgb(203, 63, 98);
+}
+
+.page-header {
+    background-color: rgb(203, 63, 98);
 }
