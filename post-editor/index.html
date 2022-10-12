@@ -12,7 +12,7 @@
 
         <!-- js -->
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-        <script type="module" src="app.js"></script>
+        <script type="module" src="post-editor.js"></script>
 
         <!-- fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,8 +46,8 @@
 
         <main>
             <form id="post-form">
-                <label>Title<input id="post-title" placeholder=""> </input></label>
-                <label>Content<textarea id="post-content"> </textarea></label>
+                <label>Title<input name="post-title" placeholder=""> </input></label>
+                <label>Content<textarea name="post-content"> </textarea></label>
                 
                 <button id="post-submit-button">Submit</button>
             </form>
