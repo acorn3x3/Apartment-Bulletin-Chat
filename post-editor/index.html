@@ -7,8 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <!-- title and favicon -->
-        <title>Supabase Web App</title>
-        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+        <title>Add Post</title>
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
 
         <!-- js -->
         <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
@@ -25,20 +25,32 @@
         <!-- css -->
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="/styles/form.css" />
+        
         <!-- add link for page specific css -->
     </head>
 
     <body>
         <header class="page-header">
-            <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <p class="title">Supabase Web App</p>
+            <img class="logo" src="/assets/1floordown.PNG" alt="logo" />
+
+            <p class="title">Add Post</p>
             <nav>
                 <a href="/">Home</a>
-                <a id="sign-out-link" href="auth">Sign Out</a>
-                <a href="">Add Post</a>
+                <div>
+                    <a href="../profile-editor/index.html" id="nav-username">Username</a>
+                    <a id="sign-out-link" href="auth">Sign Out</a>
+                </div>
             </nav>
         </header>
 
-        <main></main>
+        <main>
+            <form id="post-form">
+                <label>Title<input id="post-title" placeholder=""> </input></label>
+                <label>Content<textarea id="post-content"> </textarea></label>
+                
+                <button id="post-submit-button">Submit</button>
+            </form>
+        </main>
     </body>
 </html>

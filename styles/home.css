@@ -1,0 +1,14 @@
+.card-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.user-info {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+li {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+}
