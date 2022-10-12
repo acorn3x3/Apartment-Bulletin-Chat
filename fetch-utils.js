@@ -57,3 +57,16 @@ export async function updateProfile(profile) {
 export async function getProfile(id) {
     return await client.from('profiles').select('*').eq('id', id).maybeSingle();
 }
+
+export async function getPost(id) {
+    return await client
+        .from('posts')
+        .select(`*,comments (*)`)
+        .eq('id', id)
+        .order('created_at', { foreignTable: 'comments', ascending: false })
+        .single();
+}
+
+export async function createComment(comment) {
+    return await client.from('comments').insert(comment).single();
+}
