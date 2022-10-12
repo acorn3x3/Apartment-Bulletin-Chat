@@ -41,7 +41,7 @@ export async function createPost(newPost) {
 
 // getPosts
 export async function getPosts() {
-    console.log('working!');
+    return await client.from('posts').select('*');
 }
 
 export async function updateProfile(profile) {

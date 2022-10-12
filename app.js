@@ -12,7 +12,10 @@ let error = null;
 
 /* Events */
 window.addEventListener('load', async () => {
-    getPosts();
+    const response = await getPosts();
+    error = response.error;
+    posts = response.data;
+    console.log(posts);
 });
 
 /* Display Functions */
