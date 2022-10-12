@@ -11,7 +11,7 @@
         <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
 
         <!-- js -->
-        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"></script>
         <script type="module" src="profile-editor.js"></script>
 
         <!-- fonts -->
@@ -47,8 +47,8 @@
 
         <main>
             <form id="profile-form">
-                <label>Username<input id="username-input" placeholder=""> </input></label>
-                <label>Unit number<input id="unit-input" placeholder=""> </input></label>
+                <label>Username<input name="username-input" placeholder=""> </input></label>
+                <label>Unit number<input name="unit-input" placeholder=""> </input></label>
                 
                 <button id="save-profile-button">Save</button>
             </form>
