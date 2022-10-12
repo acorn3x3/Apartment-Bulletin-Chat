@@ -12,3 +12,7 @@ li {
     padding: 10px;
     margin: 10px;
 }
+
+.page-header {
+    background-color: rgb(203, 63, 98);
+}
