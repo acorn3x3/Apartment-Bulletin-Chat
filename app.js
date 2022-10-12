@@ -15,8 +15,12 @@ let error = null;
 window.addEventListener('load', async () => {
     const response = await getPosts();
     error = response.error;
-    posts = response.data;
-    displayPosts();
+    if (error) {
+        alert(error.message);
+    } else {
+        posts = response.data;
+        displayPosts();
+    }
 });
 
 /* Display Functions */
