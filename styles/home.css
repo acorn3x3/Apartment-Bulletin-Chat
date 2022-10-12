@@ -7,13 +7,19 @@
     grid-template-rows: 1fr 1fr;
 }
 
+#post-list {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 10px;
+}
+
 li {
     background-color: rgb(243, 243, 243);
     padding: 10px;
     margin: 10px;
-    height: 20%;
+    height: 100%;
     width: 40%;
-    position: absolute;
+    /* position: absolute; */
     border-radius: 10%;
     border-color: rgb(203, 63, 98);
 }
