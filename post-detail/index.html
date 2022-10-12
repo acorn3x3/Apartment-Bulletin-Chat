@@ -7,8 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
         <!-- title and favicon -->
-        <title>Supabase Web App</title>
-        <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+        <title>Post Details</title>
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
 
         <!-- js -->
         <script
@@ -28,13 +28,14 @@
         <!-- css -->
         <link rel="stylesheet" href="/styles/reset.css" />
         <link rel="stylesheet" href="/styles/global.css" />
+
         <!-- add link for page specific css -->
     </head>
 
     <body>
         <header class="page-header">
-            <img class="logo" src="/assets/html_css_js.png" alt="logo" />
-            <p class="title">Supabase Web App</p>
+            <img class="logo" src="/assets/1floordown.PNG" alt="logo" />
+            <p class="title">Post Detail</p>
             <nav>
                 <a href="/">Home</a>
                 <a id="sign-out-link" href="../auth">Sign Out</a>
@@ -42,6 +43,13 @@
             </nav>
         </header>
 
-        <main></main>
+        <main>
+            <div>
+                <form id="add-comment-form">
+                    <input name="comment" placeholder="add a comment" />
+                    <button>Comment</button>
+                </form>
+            </div>
+        </main>
     </body>
 </html>
