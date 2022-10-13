@@ -41,7 +41,10 @@ export async function createPost(newPost) {
 
 // getPosts
 export async function getPosts() {
-    return await client.from('posts').select('*');
+    const response = await client.from('posts').select(`*, user:profiles(user_name, unit)`);
+    // const response = await client.from('posts').select('*', profiles(user_name, unit));
+    console.log(response);
+    return response;
 }
 
 export async function updateProfile(profile) {
