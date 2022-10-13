@@ -7,21 +7,39 @@ import { renderComment } from '../render-utils.js';
 import '../auth/user.js';
 
 /* Get DOM Elements */
-const postTitle = document.getElementById('post-title');
-const postContent = document.getElementById('post-content');
+const postDisplay = document.getElementById('post-display');
 const commentList = document.getElementById('comment-list');
 const addCommentForm = document.getElementById('add-comment-form');
 
 /* State */
 let post = null;
-// todo: delete this
-post = {
-    id: 12,
-    text: 'blah',
-};
 let error = null;
 
 /* Events */
+window.addEventListener('load', async () => {
+    const searchParams = new URLSearchParams(location.search);
+    const id = searchParams.get('id');
+    if (!id) {
+        location.assign('/');
+        return;
+    }
+    const response = await getPost(id);
+    error = response.error;
+
+    if (error) {
+        alert(error.message);
+    } else {
+        post = response.data;
+        console.log(post);
+    }
+    if (!post) {
+        location.assign('/');
+    } else {
+        displayPost();
+        displayComments();
+    }
+});
+
 addCommentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(addCommentForm);
@@ -36,7 +54,27 @@ addCommentForm.addEventListener('submit', async (e) => {
         alert(error.message);
     } else {
         addCommentForm.reset();
+        displayComments();
     }
 });
 
 /* Display Functions */
+function displayPost() {
+    const h2 = document.createElement('h2');
+    h2.textContent = post.title;
+
+    const p = document.createElement('p');
+    p.textContent = post.content;
+
+    postDisplay.append(h2, p);
+}
+
+// }
+
+function displayComments() {
+    commentList.innerHTML = '';
+    for (const comment of post.comments) {
+        const commentEl = renderComment(comment);
+        commentList.append(commentEl);
+    }
+}
