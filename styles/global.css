@@ -1,13 +1,14 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: white;
-    --text-color: rgb(161, 66, 125);
-    --label-color: rgb(151, 0, 71);
-    --placeholder-color: rgb(136, 136, 153);
-    --offset-color: rgb(238, 160, 215);
-    --action-color: rgb(230, 0, 180);
+    --background: rgb(172, 42, 107);
+    --background-color: rgb(172, 42, 107);
+    --header-background: rgba(160, 94, 125, 0.925);
+    --text-color: rgb(203, 63, 98);
+    --label-color: rgb(243, 224, 224);
+    --placeholder-color: rgb(225, 250, 3);
+    --offset-color: rgb(207, 68, 138);
+    --action-color: rgb(104, 0, 61);
 
-    --primary-font: 'Elephant', Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
+    --primary-font: 'Elephant', 'Corbel', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans',
         'DejaVu Sans', 'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
 }
 
@@ -15,9 +16,10 @@ body {
     height: 100vh;
     font-family: var(--primary-font);
     color: var(--text-color);
-    background: var(--background);
+    background: rgb black;
     display: grid;
     grid-template-rows: auto 1fr;
+    background-color: pink;
 }
 
 .page-header {
@@ -68,4 +70,13 @@ main {
 
 .hidden {
     display: none;
+}
+
+button {
+    background-color: rgb(235, 113, 150);
+    color: white;
+}
+
+input {
+    background-color: rgb(245, 245, 245);
 }
