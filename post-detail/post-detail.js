@@ -30,7 +30,6 @@ window.addEventListener('load', async () => {
         alert(error.message);
     } else {
         post = response.data;
-        console.log(post);
     }
     if (!post) {
         location.assign('/');
@@ -42,7 +41,15 @@ window.addEventListener('load', async () => {
     onComment(post.id, async (payload) => {
         const commentId = payload.new.id;
         const commentResponse = await getComment(commentId);
-        console.log(commentResponse);
+        error = commentResponse.error;
+        if (error) {
+            alert(error.message);
+        } else {
+            const comment = commentResponse.data;
+            post.comments.unshift(comment);
+            console.log(post.comments);
+            displayComments();
+        }
     });
 });
 

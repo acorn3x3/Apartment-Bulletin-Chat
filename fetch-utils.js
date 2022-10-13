@@ -81,7 +81,7 @@ export function onComment(postID, handleComment) {
 export async function getComment(id) {
     return await client
         .from('comments')
-        .select(`*, user:profiles(id, user_name)`)
+        .select(`*, user:profiles(id, user_name, unit)`)
         .eq('id', id)
         .single();
 }
