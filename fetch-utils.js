@@ -64,7 +64,7 @@ export async function getProfile(id) {
 export async function getPost(id) {
     return await client
         .from('posts')
-        .select(`*,comments (*)`)
+        .select(`*,comments(*, profiles(*))`)
         .eq('id', id)
         .order('created_at', { foreignTable: 'comments', ascending: false })
         .single();
