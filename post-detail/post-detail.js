@@ -13,7 +13,30 @@ const commentList = document.getElementById('comment-list');
 const addCommentForm = document.getElementById('add-comment-form');
 
 /* State */
+let post = null;
+// todo: delete this
+post = {
+    id: 12,
+    text: 'blah',
+};
+let error = null;
 
 /* Events */
+addCommentForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(addCommentForm);
+    const newComment = {
+        comment: formData.get('comment'),
+        post_id: post.id,
+    };
+
+    const response = await createComment(newComment);
+    error = response.error;
+    if (error) {
+        alert(error.message);
+    } else {
+        addCommentForm.reset();
+    }
+});
 
 /* Display Functions */
