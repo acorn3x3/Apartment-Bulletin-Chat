@@ -3,7 +3,7 @@ form:not(.inline) {
     margin: auto;
     max-width: 500px;
     border: 1px solid;
-    background: var(--offset-color);
+    background: rgb(203, 63, 98);
     padding: 20px;
 
     display: grid;
@@ -11,7 +11,7 @@ form:not(.inline) {
 }
 
 label {
-    font-family: 'Titillium Web';
+    font-family: 'elephant';
     font-size: 0.9em;
     font-weight: bold;
     color: var(--label-color);
