@@ -47,33 +47,33 @@ export function renderComment(comment) {
     const li = document.createElement('li');
     li.textContent = comment.comment;
 
-    // const pUser = document.createElement('p');
-    // pUser.textContent = comment.user.user_name;
+    const pUser = document.createElement('p');
+    pUser.textContent = comment.profiles.user_name;
 
-    // const pUnit = document.createElement('p');
-    // pUnit.textContent = comment.user.unit;
+    const pUnit = document.createElement('p');
+    pUnit.textContent = comment.profiles.unit;
 
-    // const divUser = document.createElement('div');
-    // divUser.classList.add('user-info');
+    const divUser = document.createElement('div');
+    divUser.classList.add('user-info');
 
-    // const pCreatedDate = document.createElement('p');
+    const pCreatedDate = document.createElement('p');
 
-    // const divHead = document.createElement('div');
-    // //divHead.classList.add('card-header');
+    const divHead = document.createElement('div');
+    //divHead.classList.add('card-header');
 
-    // pCreatedDate.textContent = new Date(comment.created_at).toLocaleString('en-US', {
-    //     day: 'numeric',
-    //     month: 'numeric',
-    //     year: 'numeric',
-    //     hour: 'numeric',
-    //     minute: 'numeric',
-    // });
+    pCreatedDate.textContent = new Date(comment.created_at).toLocaleString('en-US', {
+        day: 'numeric',
+        month: 'numeric',
+        year: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+    });
 
-    // divUser.append(pUser);
-    // divUser.append(pUnit);
-    // divHead.append(divUser);
-    // divHead.append(pCreatedDate);
-    // li.append(divHead, divUser);
+    divUser.append(pUser);
+    divUser.append(pUnit);
+    divHead.append(divUser);
+    divHead.append(pCreatedDate);
+    li.append(divHead, divUser);
 
     return li;
 }

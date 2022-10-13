@@ -86,7 +86,7 @@ function displayPost() {
 // }
 
 function displayComments() {
-    console.log(post.comments);
+    // console.log(post.comments);
     commentList.innerHTML = '';
     for (const comment of post.comments) {
         const commentEl = renderComment(comment);
