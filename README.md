@@ -6,6 +6,8 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
 
 ## Making a plan
 
+https://whimsical.com/1-floor-down-group-project-2WNHAPvAt1k3ToUN6ZTiNE
+
 1. **Make a drawing of your app. Simple "wireframes"**
 1. **Once you have a drawing, name the HTML elements you'll need to realize your vision**
 1. **For each HTML element ask: Why do I need this?**

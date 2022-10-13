@@ -1,48 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- metadata -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <!-- title and favicon -->
+        <title>1 Floor Down</title>
+        <link rel="icon" type="image/x-icon" href="/assets/favicon.PNG" />
 
-    <!-- title and favicon -->
-    <title>Supabase Web App</title>
-    <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+        <!-- js -->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
+        <script type="module" src="app.js"></script>
 
-    <!-- js -->
-    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script type="module" src="app.js"></script>
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap"
+        />
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+        <!-- css -->
+        <link rel="stylesheet" href="/styles/reset.css" />
+        <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="/styles/home.css" />
+        <!-- add link for page specific css -->
+    </head>
 
+    <body>
+        <header class="page-header">
+            <img class="logo" src="/assets/1floordown.PNG" alt="logo" />
+            <p class="title"></p>
+            <p class="current-user"></p>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/post-editor/index.html">Add Post</a>
+                <div>
+                    <a href="/profile-editor/index.html" id="nav-username">Username</a>
+                    <a id="sign-out-link" href="auth">Sign Out</a>
+                </div>
+            </nav>
+        </header>
 
-    <!-- css -->
-    <link rel="stylesheet" href="/styles/reset.css" />
-    <link rel="stylesheet" href="/styles/global.css" />
-    <!-- add link for page specific css -->
-
-</head>
-
-<body>
-    <header class="page-header">
-        <img class="logo" src="/assets/html_css_js.png" alt="logo">
-        <p class="title">Supabase Web App</p>
-        <nav>
-            <a href="/">Home</a>
-            <a id="sign-out-link" href="auth">Sign Out</a>
-        </nav>
-    </header>
-
-    <main>
-
-    </main>
-
-</body>
-
+        <main>
+            <ul id="post-list">
+                <li>
+                    <div class="card-header">
+                        <div class="user-info">
+                            <p>username</p>
+                            <p>unit #</p>
+                        </div>
+                        <p>created date</p>
+                    </div>
+                    <h2>Post title 1</h2>
+                    <p>
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                </li>
+                <li>
+                    <div class="card-header">
+                        <div class="user-info">
+                            <p>username</p>
+                            <p>unit #</p>
+                        </div>
+                        <p>created date</p>
+                    </div>
+                    <h2>Post title 2</h2>
+                    <p>
+                        lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
+                        lorem ipsum lorem ipsum lorem ipsum
+                    </p>
+                </li>
+            </ul>
+        </main>
+    </body>
 </html>
