@@ -1,6 +1,6 @@
 /* Imports */
 import { getPost } from '../fetch-utils.js';
-import { createComment } from '../fetch-utils.js';
+import { createComment, onComment, getComment } from '../fetch-utils.js';
 import { renderComment } from '../render-utils.js';
 
 // this will check if we have a user and set signout link if it exists
@@ -38,6 +38,12 @@ window.addEventListener('load', async () => {
         displayPost();
         displayComments();
     }
+
+    onComment(post.id, async (payload) => {
+        const commentId = payload.new.id;
+        const commentResponse = await getComment(commentId);
+        console.log(commentResponse);
+    });
 });
 
 addCommentForm.addEventListener('submit', async (e) => {
